@@ -1,0 +1,140 @@
+$primarywidth: 10vw;
+$primaryheight: 5vh;
+
+body {
+  display: flex;
+
+  .container {
+    border: 2px solid blue;
+    background-color: aqua;
+    display: grid;
+
+    &__display {
+      background-color: aquamarine;
+      padding: 5vw;
+    }
+
+    // &__buttons {
+    .buttons {
+      &__main {
+        padding: 1vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "to to to to to"
+          "nu nu nu eq eq"
+          "nu nu nu eq eq"
+          "nu nu nu eq eq"
+          "nu nu nu en en";
+        transition-duration: 0.4s;
+
+        &--top {
+          display: grid;
+          // justify-items: center;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          grid-area: to;
+          padding: 2%;
+        }
+
+        &--numbers {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-area: nu;
+          grid-template-areas: "se e n" "f fi s" "o t th" "d z p";
+          color: cornflowerblue;
+          justify-content: start;
+
+          // margin: 5%;
+          #zero {
+            grid-area: z;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #one {
+            grid-area: o;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #two {
+            grid-area: t;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #three {
+            grid-area: th;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #four {
+            grid-area: f;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #five {
+            grid-area: fi;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #six {
+            grid-area: s;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #seven {
+            grid-area: se;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #eight {
+            grid-area: e;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #nine {
+            grid-area: n;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #plusminus {
+            grid-area: p;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+          #dot {
+            grid-area: d;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+          }
+        }
+
+        &--equations {
+          display: grid;
+          grid-area: eq;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          padding: 4%;
+        }
+
+        &--enters {
+          display: grid;
+          grid-area: en;
+          padding: 4%;
+        }
+      }
+    }
+  }
+}

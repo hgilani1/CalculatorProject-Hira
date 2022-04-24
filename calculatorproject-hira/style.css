@@ -1,0 +1,95 @@
+body {
+  display: flex;
+}
+body .container {
+  border: 2px solid blue;
+  background-color: aqua;
+  display: grid;
+}
+body .container__display {
+  background-color: aquamarine;
+  padding: 5vw;
+}
+body .container .buttons__main {
+  padding: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "to to to to to" "nu nu nu eq eq" "nu nu nu eq eq" "nu nu nu eq eq" "nu nu nu en en";
+  transition-duration: 0.4s;
+}
+body .container .buttons__main--top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-area: to;
+  padding: 2%;
+}
+body .container .buttons__main--numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-area: nu;
+  grid-template-areas: "se e n" "f fi s" "o t th" "d z p";
+  color: cornflowerblue;
+  justify-content: start;
+}
+body .container .buttons__main--numbers #zero {
+  grid-area: z;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #one {
+  grid-area: o;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #two {
+  grid-area: t;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #three {
+  grid-area: th;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #four {
+  grid-area: f;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #five {
+  grid-area: fi;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #six {
+  grid-area: s;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #seven {
+  grid-area: se;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #eight {
+  grid-area: e;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #nine {
+  grid-area: n;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #plusminus {
+  grid-area: p;
+  padding: 4%;
+}
+body .container .buttons__main--numbers #dot {
+  grid-area: d;
+  padding: 4%;
+}
+body .container .buttons__main--equations {
+  display: grid;
+  grid-area: eq;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 4%;
+}
+body .container .buttons__main--enters {
+  display: grid;
+  grid-area: en;
+  padding: 4%;
+}

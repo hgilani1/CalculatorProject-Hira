@@ -1,14 +1,19 @@
 body {
   display: flex;
+  background-color: #4d8bc8;
 }
 body .container {
-  border: 2px solid blue;
-  background-color: aqua;
+  border-radius: 12px;
   display: grid;
+  background-color: #ebf5ff;
 }
 body .container__display {
-  background-color: aquamarine;
-  padding: 5vw;
+  margin: 10%;
+  background-color: #cce6ff;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #153b5e;
+  text-align: right;
 }
 body .container .buttons__main {
   padding: 1vw;
@@ -24,6 +29,13 @@ body .container .buttons__main--top {
   grid-area: to;
   padding: 2%;
 }
+body .container .buttons__main--top #toprow {
+  background-color: #a3d0fa;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #508ac7;
+}
 body .container .buttons__main--numbers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -36,50 +48,110 @@ body .container .buttons__main--numbers {
 body .container .buttons__main--numbers #zero {
   grid-area: z;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #one {
   grid-area: o;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #two {
   grid-area: t;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #three {
   grid-area: th;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #four {
   grid-area: f;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #five {
   grid-area: fi;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #six {
   grid-area: s;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #seven {
   grid-area: se;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #eight {
   grid-area: e;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #nine {
   grid-area: n;
   padding: 4%;
+  background-color: #cce6ff;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #153b5e;
 }
 body .container .buttons__main--numbers #plusminus {
   grid-area: p;
   padding: 4%;
+  background-color: #a3d0fa;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #508ac7;
 }
 body .container .buttons__main--numbers #dot {
   grid-area: d;
   padding: 4%;
+  background-color: #a3d0fa;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #508ac7;
 }
 body .container .buttons__main--equations {
   display: grid;
@@ -88,8 +160,21 @@ body .container .buttons__main--equations {
   grid-template-rows: 1fr 1fr 1fr;
   padding: 4%;
 }
+body .container .buttons__main--equations #rightside {
+  background-color: #a3d0fa;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #508ac7;
+}
 body .container .buttons__main--enters {
   display: grid;
   grid-area: en;
-  padding: 4%;
+}
+body .container .buttons__main--enters #bottomright {
+  background-color: #4d8bc8;
+  border-radius: 6px;
+  border: #4d8bc8;
+  margin: 3%;
+  color: #ebf5ff;
 }

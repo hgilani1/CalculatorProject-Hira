@@ -1,17 +1,26 @@
 $primarywidth: 10vw;
 $primaryheight: 5vh;
+$primaryborder: 12px;
+$secondaryborder: 6px;
+
+@use "design";
 
 body {
   display: flex;
+  background-color: #4d8bc8;
 
   .container {
-    border: 2px solid blue;
-    background-color: aqua;
+    border-radius: $primaryborder;
     display: grid;
+    background-color: #ebf5ff;
 
     &__display {
-      background-color: aquamarine;
-      padding: 5vw;
+      margin: 10%;
+      background-color: #cce6ff;
+      border-radius: $primaryborder;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #153b5e;
+      text-align: right;
     }
 
     // &__buttons {
@@ -35,6 +44,13 @@ body {
           grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
           grid-area: to;
           padding: 2%;
+          #toprow {
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
+          }
         }
 
         &--numbers {
@@ -46,78 +62,137 @@ body {
           color: cornflowerblue;
           justify-content: start;
 
-          // margin: 5%;
           #zero {
             grid-area: z;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #one {
             grid-area: o;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #two {
             grid-area: t;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #three {
             grid-area: th;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #four {
             grid-area: f;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #five {
             grid-area: fi;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #six {
             grid-area: s;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #seven {
             grid-area: se;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #eight {
             grid-area: e;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #nine {
             grid-area: n;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
           }
           #plusminus {
             grid-area: p;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
           }
           #dot {
             grid-area: d;
             // width: $primarywidth;
             // height: $primaryheight;
             padding: 4%;
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
           }
         }
 
@@ -127,12 +202,26 @@ body {
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr 1fr;
           padding: 4%;
+          #rightside {
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
+          }
         }
 
         &--enters {
           display: grid;
           grid-area: en;
-          padding: 4%;
+          // padding: 4%;
+          #bottomright {
+            background-color: #4d8bc8;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #ebf5ff;
+          }
         }
       }
     }

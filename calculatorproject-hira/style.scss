@@ -14,13 +14,16 @@ body {
     display: grid;
     background-color: #ebf5ff;
 
-    &__display {
+    &__output {
+      display: flex;
       margin: 10%;
       background-color: #cce6ff;
       border-radius: $primaryborder;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #153b5e;
-      text-align: right;
+      justify-content: flex-end;
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #153b5e;
+      }
     }
 
     // &__buttons {
@@ -41,10 +44,18 @@ body {
         &--top {
           display: grid;
           // justify-items: center;
-          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          // grid-template-columns: 1fr 1fr 1fr 1fr 1fr; for 5 buttons on top row
+          grid-template-columns: 1fr 1fr;
           grid-area: to;
           padding: 2%;
-          #toprow {
+          #del {
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
+          }
+          #clear {
             background-color: #a3d0fa;
             border-radius: $secondaryborder;
             border: #4d8bc8;
@@ -62,7 +73,7 @@ body {
           color: cornflowerblue;
           justify-content: start;
 
-          #zero {
+          #kb0 {
             grid-area: z;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -73,7 +84,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #one {
+          #kb1 {
             grid-area: o;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -84,7 +95,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #two {
+          #kb2 {
             grid-area: t;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -95,7 +106,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #three {
+          #kb3 {
             grid-area: th;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -106,7 +117,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #four {
+          #kb4 {
             grid-area: f;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -117,7 +128,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #five {
+          #kb5 {
             grid-area: fi;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -128,7 +139,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #six {
+          #kb6 {
             grid-area: s;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -139,7 +150,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #seven {
+          #kb7 {
             grid-area: se;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -150,7 +161,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #eight {
+          #kb8 {
             grid-area: e;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -161,7 +172,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #nine {
+          #kb9 {
             grid-area: n;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -172,7 +183,7 @@ body {
             margin: 3%;
             color: #153b5e;
           }
-          #plusminus {
+          #kbplusminus {
             grid-area: p;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -183,7 +194,7 @@ body {
             margin: 3%;
             color: #508ac7;
           }
-          #dot {
+          #kbdot {
             grid-area: d;
             // width: $primarywidth;
             // height: $primaryheight;
@@ -202,7 +213,7 @@ body {
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr 1fr;
           padding: 4%;
-          #rightside {
+          .rightside {
             background-color: #a3d0fa;
             border-radius: $secondaryborder;
             border: #4d8bc8;
@@ -215,7 +226,7 @@ body {
           display: grid;
           grid-area: en;
           // padding: 4%;
-          #bottomright {
+          .bottomright {
             background-color: #4d8bc8;
             border-radius: $secondaryborder;
             border: #4d8bc8;

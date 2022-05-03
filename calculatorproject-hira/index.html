@@ -6,47 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="calculator.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="container__display">
-        <p>123</p>
-        <!-- input text -->
+      <div class="container__output">
+        <p id="displays"></p>
       </div>
+      <!-- input text -->
+
       <div class="container__buttons">
         <div class="buttons">
           <div class="buttons__main">
             <div class="buttons__main--top">
-              <button id="toprow">(</button>
+              <!-- <button id="toprow">(</button>
               <button id="toprow">)</button>
-              <button id="toprow">ans</button>
-              <button id="toprow">del</button>
-              <button id="toprow">clear</button>
+              <button id="toprow">ans</button> -->
+              <button id="del">del</button>
+              <button id="clear">clear</button>
             </div>
             <div class="buttons__main--numbers">
-              <button id="zero">0</button>
-              <button id="one">1</button>
-              <button id="two">2</button>
-              <button id="three">3</button>
-              <button id="four">4</button>
-              <button id="five">5</button>
-              <button id="six">6</button>
-              <button id="seven">7</button>
-              <button id="eight">8</button>
-              <button id="nine">9</button>
-              <button id="plusminus">±</button>
-              <button id="dot">.</button>
+              <button id="kb0">0</button>
+              <button id="kb1">1</button>
+              <button id="kb2">2</button>
+              <button id="kb3">3</button>
+              <button id="kb4">4</button>
+              <button id="kb5">5</button>
+              <button id="kb6">6</button>
+              <button id="kb7">7</button>
+              <button id="kb8">8</button>
+              <button id="kb9">9</button>
+              <button id="kbplusminus">±</button>
+              <button id="kbdot">.</button>
             </div>
             <div class="buttons__main--equations">
-              <button id="rightside">√</button>
-              <button id="rightside">%</button>
-              <button id="rightside">x</button>
-              <button id="rightside">÷</button>
-              <button id="rightside">+</button>
-              <button id="rightside">-</button>
+              <button class="rightside" id="√">√</button>
+              <button class="rightside" id="%">%</button>
+              <button class="rightside" id="x">x</button>
+              <button class="rightside" id="÷">÷</button>
+              <button class="rightside" id="+">+</button>
+              <button class="rightside" id="-">-</button>
             </div>
             <div class="buttons__main--enters">
-              <button id="bottomright">ENTER</button>
+              <button class="bottomright" id="result">ENTER</button>
             </div>
           </div>
         </div>

@@ -48,15 +48,49 @@ displayNumber8.addEventListener("click", () => inputDisplayNumber(8));
 const displayNumber9 = document.getElementById("kb9");
 displayNumber9.addEventListener("click", () => inputDisplayNumber(9));
 
+// display square root
+const displayNumberSquare = document.getElementById("√");
+displayNumberSquare.addEventListener("click", () => inputDisplayNumber("√"));
+
+// display percentage
+const displayNumberPercentage = document.getElementById("%");
+displayNumberPercentage.addEventListener("click", () =>
+  inputDisplayNumber("%")
+);
+
+// display multiply
+const displayNumberMultiply = document.getElementById("x");
+displayNumberMultiply.addEventListener("click", () => inputDisplayNumber("x"));
+
+// display divide
+const displayNumberDivide = document.getElementById("÷");
+displayNumberDivide.addEventListener("click", () => inputDisplayNumber("÷"));
+
+// display plus
+const displayNumberPlus = document.getElementById("+");
+displayNumberPlus.addEventListener("click", () => inputDisplayNumber("+"));
+
+// display minus
+const displayNumberMinus = document.getElementById("-");
+displayNumberMinus.addEventListener("click", () => inputDisplayNumber("-"));
+
+//display enter
+const displayNumberEnter = document.getElementById("result");
+displayNumberEnter.addEventListener("click", () => inputDisplayNumber("="));
+
+// display decimal
+const displayNumberDot = document.getElementById("kbdot");
+displayNumberDot.addEventListener("click", () => inputDisplayNumber("."));
+
+// display only one equal sign
+const inputNumberEnter = () => {
+  if (displayNumberEnter.length > 1) return;
+};
 // display plusminus button
 // const displayPlusminus = document.getElementById("kbplusminus");
 // displayPlusminus.addEventListener("click", () => inputDisplayNumber("±"));
 
-const displayNumberClear = document.getElementById("clear");
-displayNumberClear.addEventListener("click", () => {
-  inputdisplayNumberClear(" ");
-});
-
+// function to display input on display screen
 let number = "";
 const inputDisplayNumber = (n) => {
   number += n;
@@ -64,22 +98,36 @@ const inputDisplayNumber = (n) => {
   return (document.getElementById("displays").innerText = number);
 };
 
-// backspace button function -NOT WORKING
+// Clear button
+const displayNumberClear = document.getElementById("clear");
+displayNumberClear.addEventListener("click", () => inputNumberClear());
 
-// const displayDelete = document.getElementById("del");
-// displayDelete.addEventListener("click", () =>
-//   inputDisplayNumber(slice(0, displayNon.length - 1))
-// );
+// Clear button function
+let numberClear = " ";
+const inputNumberClear = () => {
+  numberClear = clearInterval();
+  return (document.getElementById("displays").innerText = numberClear);
+};
 
+// function clear() {
+//   current = "0";
+//   document.displayNumberClear.value = current;
+// }
+
+// backspace button function -NOT WORKING - getting undefined
+
+const displayNumberDelete = document.getElementById("del");
+displayNumberDelete.addEventListener("click", () =>
+  inputNumberDelete(numberDelete.pop)
+);
+
+let numberDelete = "";
+const inputNumberDelete = () => {
+  numberDelete = " ";
+  return (document.getElementById("displays").innerText = numberDelete.pop);
+};
 // const displayNon = document.getElementById("del");
 // displayNon.addEventListener("click", () => slice(0, displayNon.length - 1));
-// console.log(displayNumber);
-// };
-
-// clear button function - NOT WORKING
-// const displayNone = document.getElementById("clear");
-// clear = () => {
-//   displayNone = "";
 // console.log(displayNumber);
 // };
 
@@ -88,22 +136,54 @@ const inputDisplayNumber = (n) => {
 //   input_field.value = value;
 // });
 
-// operators function buttons - NOT WORKING
-// {
-//   if (operator == "+") {
-//     result = number1 + number2;
-//   } else if (operator == "-") {
-//     result = number1 - number2;
-//   } else if (operator == "x") {
-//     result = number1 * number2;
-//   } else if (operator == "÷") {
-//     result = number1 / number2;
-//   } else if (operator == "%") {
-//     result = (number2 / number1) * 100;
-//   } else if (operator == "√") {
-//     result = Math.sqrt(number1);
-//   }
+let number1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "."];
+let number2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "."];
+let operator = ["+", "-", "x", "÷", "%", "√"];
 
-//   // display the result
-//   console.log(`${number1} ${operator} ${number2} = ${result}`);
-// }
+// operators function buttons - NOT WORKING
+const numberDisplay = document.getElementsByClassName("rightside");
+numberDisplay.addEventListener("click", () => inputNumberDisplay(""));
+
+let ops = " ";
+const inputOps = () => {
+  result = `${number1}` + `${number2}`;
+  if (operator === "+") {
+    result = `${number1}` + `${number2}`;
+  }
+  if (operator === "-") {
+    result = `${number1}` - `${number2}`;
+  }
+  if (operator === "x") {
+    result = `${number1}` * `${number2}`;
+  }
+  if (operator === "÷") {
+    result = `${number1}` / `${number2}`;
+  }
+  if (operator === "%") {
+    result = (`${number1}` / `${number2}`) * 100;
+  }
+  if (operator === "√") {
+    result = Math.sqrt(`${number1}`);
+  }
+
+  // function of operators in use
+  displayNumberEnter.addEventListener("click", () =>
+    inputNumberResult(numberResult)
+  );
+  let numberResult = "";
+  const inputNumberResult = () => {
+    numberResult = `${number1} ${operator} ${number2} = ${result}`;
+    return (document.getElementById("displays").innerText = inputOps);
+  };
+
+  //   // display the result
+  // console.log(
+  //   `${inputDisplayNumber} ${operator} ${inputDisplayNumber} = ${result}`
+  // );
+
+  // function add(item1, item2) {
+  //   let answer = 0;
+  //   answer = item1 + item2;
+  //   return answer;
+  // }
+};

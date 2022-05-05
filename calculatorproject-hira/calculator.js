@@ -2,11 +2,6 @@ const numbers = [];
 for (let i = 65; i < 91; i++) {
   numbers.push(String.fromCharCode(i));
 }
-// for (let i = 0; i < numbers.length; i++) {
-//   const num = numbers[i];
-//   const button = document.getElementById("kb" + num);
-//   button.addEventListener("click", () => inputNumberDisplay(7));
-// }
 
 // display number 0
 const displayNumber0 = document.getElementById("kb0");
@@ -48,49 +43,24 @@ displayNumber8.addEventListener("click", () => inputDisplayNumber(8));
 const displayNumber9 = document.getElementById("kb9");
 displayNumber9.addEventListener("click", () => inputDisplayNumber(9));
 
-// display square root
-const displayNumberSquare = document.getElementById("√");
-displayNumberSquare.addEventListener("click", () => inputDisplayNumber("√"));
-
-// display percentage
-const displayNumberPercentage = document.getElementById("%");
-displayNumberPercentage.addEventListener("click", () =>
-  inputDisplayNumber("%")
-);
-
-// display multiply
-const displayNumberMultiply = document.getElementById("x");
-displayNumberMultiply.addEventListener("click", () => inputDisplayNumber("x"));
-
-// display divide
-const displayNumberDivide = document.getElementById("÷");
-displayNumberDivide.addEventListener("click", () => inputDisplayNumber("÷"));
-
-// display plus
-const displayNumberPlus = document.getElementById("+");
-displayNumberPlus.addEventListener("click", () => inputDisplayNumber("+"));
-
-// display minus
-const displayNumberMinus = document.getElementById("-");
-displayNumberMinus.addEventListener("click", () => inputDisplayNumber("-"));
-
-//display enter
-const displayNumberEnter = document.getElementById("result");
-displayNumberEnter.addEventListener("click", () => inputDisplayNumber("="));
+// display enter
+// const displayNumberEnter = document.getElementById("result");
+// displayNumberEnter.addEventListener("click", () => inputDisplayNumber(result));
 
 // display decimal
 const displayNumberDot = document.getElementById("kbdot");
 displayNumberDot.addEventListener("click", () => inputDisplayNumber("."));
 
 // display only one equal sign
-const inputNumberEnter = () => {
-  if (displayNumberEnter.length > 1) return;
-};
+// const inputNumberEnter = () => {
+//   if (displayNumberEnter.length > 1) return;
+// };
+
 // display plusminus button
 // const displayPlusminus = document.getElementById("kbplusminus");
 // displayPlusminus.addEventListener("click", () => inputDisplayNumber("±"));
 
-// function to display input on display screen
+// function to display first input on screen
 let number = "";
 const inputDisplayNumber = (n) => {
   number += n;
@@ -98,92 +68,142 @@ const inputDisplayNumber = (n) => {
   return (document.getElementById("displays").innerText = number);
 };
 
+// let number1 = "";
+// const inputDisplayNumberOne = (m) => {
+//   number1 += m;
+//   if (number1.length > 10) return;
+//   return (document.getElementById("displays").innerText = number1);
+// };
+
 // Clear button
 const displayNumberClear = document.getElementById("clear");
 displayNumberClear.addEventListener("click", () => inputNumberClear());
 
 // Clear button function
-let numberClear = " ";
+
 const inputNumberClear = () => {
-  numberClear = clearInterval();
-  return (document.getElementById("displays").innerText = numberClear);
+  document.getElementById("displays").innerText = "";
+  number = "";
 };
 
-// function clear() {
-//   current = "0";
-//   document.displayNumberClear.value = current;
-// }
+// backspace button function -NOT WORKING
 
-// backspace button function -NOT WORKING - getting undefined
+// const displayNumberDelete = document.getElementById("del");
+// displayNumberDelete.addEventListener("click", () => inputNumberDelete());
 
-const displayNumberDelete = document.getElementById("del");
-displayNumberDelete.addEventListener("click", () =>
-  inputNumberDelete(numberDelete.pop)
-);
-
-let numberDelete = "";
-const inputNumberDelete = () => {
-  numberDelete = " ";
-  return (document.getElementById("displays").innerText = numberDelete.pop);
-};
-// const displayNon = document.getElementById("del");
-// displayNon.addEventListener("click", () => slice(0, displayNon.length - 1));
-// console.log(displayNumber);
+// let inputNumberDelete = () => {
+//   myNumber = myNumber.slice(0, myNumber.length - 1);
+//   return myNumber;
 // };
 
-// result.addEventListener("click", () => {
-//   let value = eval(input_field.value);
-//   input_field.value = value;
-// });
+// display square root
+const displayOperatorSquare = document.getElementById("√");
+displayOperatorSquare.addEventListener("click", () =>
+  inputDisplayOperator("√")
+);
 
-let number1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "."];
-let number2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "."];
-let operator = ["+", "-", "x", "÷", "%", "√"];
+// display percentage
+const displayOperatorPercentage = document.getElementById("%");
+displayOperatorPercentage.addEventListener("click", () =>
+  inputDisplayOperator("%")
+);
 
-// operators function buttons - NOT WORKING
-const numberDisplay = document.getElementsByClassName("rightside");
-numberDisplay.addEventListener("click", () => inputNumberDisplay(""));
+// display multiply
+const displayOperatorMultiply = document.getElementById("x");
+displayOperatorMultiply.addEventListener("click", () =>
+  inputDisplayOperator("x")
+);
 
-let ops = " ";
-const inputOps = () => {
-  result = `${number1}` + `${number2}`;
+// display divide
+const displayOperatorDivide = document.getElementById("÷");
+displayOperatorDivide.addEventListener("click", () =>
+  inputDisplayOperator("÷")
+);
+
+// display plus
+const displayOperatorPlus = document.getElementById("+");
+displayOperatorPlus.addEventListener("click", () => inputDisplayOperator("+"));
+
+// display minus
+const displayOperatorMinus = document.getElementById("-");
+displayOperatorMinus.addEventListener("click", () => inputDisplayOperator("-"));
+
+// function operator buttons
+let operator = "";
+const inputDisplayOperator = (o) => {
+  operator += o;
+  number = myNumber;
+  document.getElementById("displays").innerText = operator;
+};
+
+var myNumber = number2;
+var number2 = "";
+
+const inputOperator = (myNumber, number2, operator) => {
+  let result = "";
   if (operator === "+") {
-    result = `${number1}` + `${number2}`;
+    result = myNumber + number2;
   }
   if (operator === "-") {
-    result = `${number1}` - `${number2}`;
+    result = myNumber - number2;
   }
   if (operator === "x") {
-    result = `${number1}` * `${number2}`;
+    result = myNumber * number2;
   }
   if (operator === "÷") {
-    result = `${number1}` / `${number2}`;
+    result = myNumber / number2;
   }
   if (operator === "%") {
-    result = (`${number1}` / `${number2}`) * 100;
+    result = (myNumber / number2) * 100;
   }
   if (operator === "√") {
-    result = Math.sqrt(`${number1}`);
+    result = Math.sqrt(myNumber);
   }
-
-  // function of operators in use
-  displayNumberEnter.addEventListener("click", () =>
-    inputNumberResult(numberResult)
-  );
-  let numberResult = "";
-  const inputNumberResult = () => {
-    numberResult = `${number1} ${operator} ${number2} = ${result}`;
-    return (document.getElementById("displays").innerText = inputOps);
-  };
-
-  //   // display the result
-  // console.log(
-  //   `${inputDisplayNumber} ${operator} ${inputDisplayNumber} = ${result}`
-  // );
-
-  // function add(item1, item2) {
-  //   let answer = 0;
-  //   answer = item1 + item2;
-  //   return answer;
+  console.log(result);
+  // switch (this.result) {
+  //   case "+":
+  //     result = myNumber + number2;
+  //     break;
+  //   case "-":
+  //     result = myNumber - number2;
+  //     break;
+  //   case "x":
+  //     result = myNumber * number2;
+  //     break;
+  //   case "÷":
+  //     result = myNumber / number2;
+  //     break;
+  //   case "%":
+  //     result = (myNumber / number2) * 100;
+  //     break;
+  //   case "√":
+  //     result = Math.sqrt(myNumber);
+  //     break;
+  //   default:
+  //     return;
   // }
 };
+
+// display enter
+
+const displayNumberEnter = document.getElementById("result");
+displayNumberEnter.addEventListener("click", () =>
+  inputOperator(myNumber, operator, number2)
+);
+
+// function for result
+const inputNumberResult = (r) => {
+  result += r;
+  number = number2;
+  document.getElementById("displays").innerText = result;
+};
+
+//   // display the result
+// console.log(
+//   `${inputDisplayNumber} ${operator} ${inputDisplayNumber} = ${result}`
+// );
+
+// function add(item1, item2) {
+//   let answer = 0;
+//   answer = item1 + item2;
+//   return answer;

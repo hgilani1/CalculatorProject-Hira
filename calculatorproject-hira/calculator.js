@@ -57,8 +57,8 @@ displayNumberDot.addEventListener("click", () => inputDisplayNumber("."));
 // };
 
 // display plusminus button
-// const displayPlusminus = document.getElementById("kbplusminus");
-// displayPlusminus.addEventListener("click", () => inputDisplayNumber("±"));
+const displayPlusminus = document.getElementById("kbplusminus");
+displayPlusminus.addEventListener("click", () => inputDisplayNumber("±"));
 
 // function to display first input on screen
 let number = "";
@@ -131,35 +131,40 @@ displayOperatorMinus.addEventListener("click", () => inputDisplayOperator("-"));
 // function operator buttons
 let operator = "";
 const inputDisplayOperator = (o) => {
-  operator += o;
-  number = myNumber;
+  operator = o;
+  myNumber = number;
+  number = "";
   document.getElementById("displays").innerText = operator;
 };
 
-var myNumber = number2;
-var number2 = "";
+// var myNumber = number2;
+// var number2 = "";
+let result = "";
+let myNumber = "";
 
-const inputOperator = (myNumber, number2, operator) => {
-  let result = "";
+const enter = (myNumber, number, operator) => {
   if (operator === "+") {
-    result = myNumber + number2;
+    result = Number(myNumber) + Number(number);
+    // return result;
   }
   if (operator === "-") {
-    result = myNumber - number2;
+    result = myNumber - number;
   }
   if (operator === "x") {
-    result = myNumber * number2;
+    result = myNumber * number;
   }
   if (operator === "÷") {
-    result = myNumber / number2;
+    result = myNumber / number;
   }
   if (operator === "%") {
-    result = (myNumber / number2) * 100;
+    result = (myNumber / number) * 100;
   }
   if (operator === "√") {
     result = Math.sqrt(myNumber);
   }
   console.log(result);
+
+  inputNumberEnter(result);
   // switch (this.result) {
   //   case "+":
   //     result = myNumber + number2;
@@ -188,13 +193,13 @@ const inputOperator = (myNumber, number2, operator) => {
 
 const displayNumberEnter = document.getElementById("result");
 displayNumberEnter.addEventListener("click", () =>
-  inputOperator(myNumber, operator, number2)
+  enter(myNumber, number, operator)
 );
 
 // function for result
-const inputNumberResult = (r) => {
-  result += r;
-  number = number2;
+const inputNumberEnter = (result) => {
+  // result = r;
+  // number = number;
   document.getElementById("displays").innerText = result;
 };
 

@@ -1,0 +1,239 @@
+$primarywidth: 10vw;
+$primaryheight: 5vh;
+$primaryborder: 12px;
+$secondaryborder: 6px;
+
+body {
+  display: flex;
+  background-color: #4d8bc8;
+
+  .container {
+    border-radius: $primaryborder;
+    display: grid;
+    background-color: #ebf5ff;
+    height: 50vh;
+    width: 20vw;
+
+    &__output {
+      display: flex;
+      margin: 10%;
+      background-color: #cce6ff;
+      border-radius: $primaryborder;
+      justify-content: flex-end;
+      margin-bottom: 1%;
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #153b5e;
+      }
+    }
+
+    // &__buttons {
+    .buttons {
+      &__main {
+        padding: 1vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "to to to to to"
+          "nu nu nu eq eq"
+          "nu nu nu eq eq"
+          "nu nu nu eq eq"
+          "nu nu nu en en";
+        transition-duration: 0.4s;
+
+        &--top {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-area: to;
+          padding: 1%;
+          // #del {
+          //   background-color: #a3d0fa;
+          //   border-radius: $secondaryborder;
+          //   border: #4d8bc8;
+          //   margin: 3%;
+          //   color: #508ac7;
+          // }
+          #clear {
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
+          }
+        }
+
+        &--numbers {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-area: nu;
+          grid-template-areas: "se e n" "f fi s" "o t th" "d z p";
+          color: cornflowerblue;
+          justify-content: start;
+
+          #kb0 {
+            grid-area: z;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb1 {
+            grid-area: o;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb2 {
+            grid-area: t;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb3 {
+            grid-area: th;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb4 {
+            grid-area: f;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb5 {
+            grid-area: fi;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb6 {
+            grid-area: s;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb7 {
+            grid-area: se;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb8 {
+            grid-area: e;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kb9 {
+            grid-area: n;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #cce6ff;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #153b5e;
+          }
+          #kbplusminus {
+            grid-area: p;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
+          }
+          #kbdot {
+            grid-area: d;
+            // width: $primarywidth;
+            // height: $primaryheight;
+            padding: 4%;
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
+          }
+        }
+
+        &--equations {
+          display: grid;
+          grid-area: eq;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          padding: 4%;
+          .rightside {
+            background-color: #a3d0fa;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #508ac7;
+          }
+        }
+
+        &--enters {
+          display: grid;
+          grid-area: en;
+          // padding: 4%;
+          .bottomright {
+            background-color: #4d8bc8;
+            border-radius: $secondaryborder;
+            border: #4d8bc8;
+            margin: 3%;
+            color: #ebf5ff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -137,8 +137,6 @@ const inputDisplayOperator = (o) => {
   document.getElementById("displays").innerText = operator;
 };
 
-// var myNumber = number2;
-// var number2 = "";
 let result = "";
 let myNumber = "";
 
@@ -165,32 +163,9 @@ const enter = (myNumber, number, operator) => {
   console.log(result);
 
   inputNumberEnter(result);
-  // switch (this.result) {
-  //   case "+":
-  //     result = myNumber + number2;
-  //     break;
-  //   case "-":
-  //     result = myNumber - number2;
-  //     break;
-  //   case "x":
-  //     result = myNumber * number2;
-  //     break;
-  //   case "÷":
-  //     result = myNumber / number2;
-  //     break;
-  //   case "%":
-  //     result = (myNumber / number2) * 100;
-  //     break;
-  //   case "√":
-  //     result = Math.sqrt(myNumber);
-  //     break;
-  //   default:
-  //     return;
-  // }
 };
 
 // display enter
-
 const displayNumberEnter = document.getElementById("result");
 displayNumberEnter.addEventListener("click", () =>
   enter(myNumber, number, operator)
@@ -198,17 +173,5 @@ displayNumberEnter.addEventListener("click", () =>
 
 // function for result
 const inputNumberEnter = (result) => {
-  // result = r;
-  // number = number;
   document.getElementById("displays").innerText = result;
 };
-
-//   // display the result
-// console.log(
-//   `${inputDisplayNumber} ${operator} ${inputDisplayNumber} = ${result}`
-// );
-
-// function add(item1, item2) {
-//   let answer = 0;
-//   answer = item1 + item2;
-//   return answer;

@@ -3,8 +3,6 @@ $primaryheight: 5vh;
 $primaryborder: 12px;
 $secondaryborder: 6px;
 
-@use "design";
-
 body {
   display: flex;
   background-color: #4d8bc8;
@@ -13,6 +11,8 @@ body {
     border-radius: $primaryborder;
     display: grid;
     background-color: #ebf5ff;
+    height: 50vh;
+    width: 20vw;
 
     &__output {
       display: flex;
@@ -20,6 +20,7 @@ body {
       background-color: #cce6ff;
       border-radius: $primaryborder;
       justify-content: flex-end;
+      margin-bottom: 1%;
       p {
         font-family: Arial, Helvetica, sans-serif;
         color: #153b5e;
@@ -43,18 +44,16 @@ body {
 
         &--top {
           display: grid;
-          // justify-items: center;
-          // grid-template-columns: 1fr 1fr 1fr 1fr 1fr; for 5 buttons on top row
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr;
           grid-area: to;
-          padding: 2%;
-          #del {
-            background-color: #a3d0fa;
-            border-radius: $secondaryborder;
-            border: #4d8bc8;
-            margin: 3%;
-            color: #508ac7;
-          }
+          padding: 1%;
+          // #del {
+          //   background-color: #a3d0fa;
+          //   border-radius: $secondaryborder;
+          //   border: #4d8bc8;
+          //   margin: 3%;
+          //   color: #508ac7;
+          // }
           #clear {
             background-color: #a3d0fa;
             border-radius: $secondaryborder;

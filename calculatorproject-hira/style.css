@@ -6,6 +6,8 @@ body .container {
   border-radius: 12px;
   display: grid;
   background-color: #ebf5ff;
+  height: 50vh;
+  width: 20vw;
 }
 body .container__output {
   display: flex;
@@ -13,6 +15,7 @@ body .container__output {
   background-color: #cce6ff;
   border-radius: 12px;
   justify-content: flex-end;
+  margin-bottom: 1%;
 }
 body .container__output p {
   font-family: Arial, Helvetica, sans-serif;
@@ -28,16 +31,9 @@ body .container .buttons__main {
 }
 body .container .buttons__main--top {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-area: to;
-  padding: 2%;
-}
-body .container .buttons__main--top #del {
-  background-color: #a3d0fa;
-  border-radius: 6px;
-  border: #4d8bc8;
-  margin: 3%;
-  color: #508ac7;
+  padding: 1%;
 }
 body .container .buttons__main--top #clear {
   background-color: #a3d0fa;
